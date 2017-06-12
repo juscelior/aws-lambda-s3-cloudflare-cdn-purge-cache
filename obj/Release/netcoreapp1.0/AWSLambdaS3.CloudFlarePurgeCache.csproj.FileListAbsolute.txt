@@ -1,0 +1,6 @@
+C:\git\github\AWSLambdaS3.CloudFlarePurgeCache\bin\Release\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.deps.json
+C:\git\github\AWSLambdaS3.CloudFlarePurgeCache\bin\Release\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.dll
+C:\git\github\AWSLambdaS3.CloudFlarePurgeCache\bin\Release\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.pdb
+C:\git\github\AWSLambdaS3.CloudFlarePurgeCache\obj\Release\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.AssemblyInfo.cs
+C:\git\github\AWSLambdaS3.CloudFlarePurgeCache\obj\Release\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.dll
+C:\git\github\AWSLambdaS3.CloudFlarePurgeCache\obj\Release\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.pdb
