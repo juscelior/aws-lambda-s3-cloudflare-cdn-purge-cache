@@ -8,12 +8,12 @@
     "All the command line options for the Lambda command can be specified in this file."
   ],
 
-  "profile":"edebe",
+  "profile":"default",
   "region" : "sa-east-1",
   "configuration" : "Release",
   "framework" : "netcoreapp1.0",
   "function-runtime":"dotnetcore1.0",
-  "function-memory-size" : 256,
+  "function-memory-size" : 128,
   "function-timeout" : 30,
   "function-handler" : "AWSLambdaS3.CloudFlarePurgeCache::AWSLambdaS3.CloudFlarePurgeCache.Function::FunctionHandler"
 }
