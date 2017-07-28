@@ -10,3 +10,4 @@ C:\Users\Administrador\Source\Repos\aws-lambda-s3-cloudflare-cdn-purge-cache\bin
 C:\Users\Administrador\Source\Repos\aws-lambda-s3-cloudflare-cdn-purge-cache\obj\Release\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.AssemblyInfo.cs
 C:\Users\Administrador\Source\Repos\aws-lambda-s3-cloudflare-cdn-purge-cache\obj\Release\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.dll
 C:\Users\Administrador\Source\Repos\aws-lambda-s3-cloudflare-cdn-purge-cache\obj\Release\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.pdb
+C:\Users\Administrador\Source\Repos\aws-lambda-s3-cloudflare-cdn-purge-cache\obj\Release\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.csprojResolveAssemblyReference.cache

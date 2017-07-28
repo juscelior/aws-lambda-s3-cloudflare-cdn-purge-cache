@@ -70,7 +70,30 @@ namespace AWSLambdaS3.CloudFlarePurgeCache
 
             try
             {
-                HttpResponseMessage message;
+
+                Task<CreateInvalidationResponse> invalidationResponseTask = null;
+
+                if (!string.IsNullOrWhiteSpace(distribuitionCloudFrontId))
+                {
+                    CreateInvalidationRequest invaliationReq = new CreateInvalidationRequest()
+                    {
+                        DistributionId = distribuitionCloudFrontId,
+                        InvalidationBatch = new InvalidationBatch(DateTime.Now.Ticks.ToString())
+                        {
+                            Paths = new Paths()
+                            {
+                                Quantity = 1,
+                                Items = new List<string>() {
+                                    $"/{s3Event.Object.Key}"
+                                }
+                            }
+                        }
+                    };
+
+                    invalidationResponseTask = this.cfClient.CreateInvalidationAsync(invaliationReq);
+                }
+
+                HttpResponseMessage message = null;
                 using (HttpClient client = new HttpClient())
                 {
                     client.DefaultRequestHeaders.Add("X-Auth-Email", Environment.GetEnvironmentVariable("Email"));
@@ -92,23 +115,9 @@ namespace AWSLambdaS3.CloudFlarePurgeCache
                     }
                 }
 
-                if (!string.IsNullOrWhiteSpace(distribuitionCloudFrontId))
+                if (invalidationResponseTask != null)
                 {
-                    CreateInvalidationRequest invaliationReq = new CreateInvalidationRequest()
-                    {
-                        DistributionId = distribuitionCloudFrontId,
-                        InvalidationBatch = new InvalidationBatch()
-                        {
-                            Paths = new Paths()
-                            {
-                                Items = new List<string>() {
-                                    $"/{s3Event.Object.Key}"
-                                }
-                            }
-                        }
-                    };
-
-                    CreateInvalidationResponse invalidationResponse = await this.cfClient.CreateInvalidationAsync(invaliationReq);
+                    await invalidationResponseTask;
                 }
 
                 return await message.Content.ReadAsStringAsync();
