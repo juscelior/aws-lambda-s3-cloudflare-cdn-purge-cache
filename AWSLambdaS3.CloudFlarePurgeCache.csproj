@@ -8,7 +8,8 @@
     <PackageReference Include="Amazon.Lambda.Core" Version="1.0.0" />
     <PackageReference Include="Amazon.Lambda.S3Events" Version="1.0.1" />
     <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="1.1.0" />
-    <PackageReference Include="AWSSDK.S3" Version="3.3.6.3" />
+    <PackageReference Include="AWSSDK.CloudFront" Version="3.3.5" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.8.2" />
     <PackageReference Include="System.Net.Http" Version="4.3.2" />
     <PackageReference Include="System.Runtime.Extensions" Version="4.3.0" />
     <PackageReference Include="System.Text.Encoding" Version="4.3.0" />

@@ -4,3 +4,10 @@ C:\git\github\AWSLambdaS3.CloudFlarePurgeCache\bin\Debug\netcoreapp1.0\AWSLambda
 C:\git\github\AWSLambdaS3.CloudFlarePurgeCache\obj\Debug\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.AssemblyInfo.cs
 C:\git\github\AWSLambdaS3.CloudFlarePurgeCache\obj\Debug\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.dll
 C:\git\github\AWSLambdaS3.CloudFlarePurgeCache\obj\Debug\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.pdb
+C:\Users\Administrador\Source\Repos\aws-lambda-s3-cloudflare-cdn-purge-cache\bin\Debug\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.deps.json
+C:\Users\Administrador\Source\Repos\aws-lambda-s3-cloudflare-cdn-purge-cache\bin\Debug\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.dll
+C:\Users\Administrador\Source\Repos\aws-lambda-s3-cloudflare-cdn-purge-cache\bin\Debug\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.pdb
+C:\Users\Administrador\Source\Repos\aws-lambda-s3-cloudflare-cdn-purge-cache\obj\Debug\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Source\Repos\aws-lambda-s3-cloudflare-cdn-purge-cache\obj\Debug\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.AssemblyInfo.cs
+C:\Users\Administrador\Source\Repos\aws-lambda-s3-cloudflare-cdn-purge-cache\obj\Debug\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.dll
+C:\Users\Administrador\Source\Repos\aws-lambda-s3-cloudflare-cdn-purge-cache\obj\Debug\netcoreapp1.0\AWSLambdaS3.CloudFlarePurgeCache.pdb

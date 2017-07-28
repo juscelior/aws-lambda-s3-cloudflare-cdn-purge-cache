@@ -1,14 +1,15 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0",
-    "signature": "ec77f63d0ae502fc442cd723362c7159bb4499b2"
+    "signature": "4cd7338b72ab3df582bd99e60c82027774a18e05"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v1.0": {
       "awslambdas3.cloudflarepurgecache/1.0.0": {
         "dependencies": {
-          "AWSSDK.S3": "3.3.6.3",
+          "AWSSDK.CloudFront": "3.3.5",
+          "AWSSDK.S3": "3.3.8.2",
           "Amazon.Lambda.Core": "1.0.0",
           "Amazon.Lambda.S3Events": "1.0.1",
           "Amazon.Lambda.Serialization.Json": "1.1.0",
@@ -31,7 +32,7 @@
       },
       "amazon.lambda.s3events/1.0.1": {
         "dependencies": {
-          "AWSSDK.S3": "3.3.6.3",
+          "AWSSDK.S3": "3.3.8.2",
           "System.Runtime": "4.3.0"
         },
         "runtime": {
@@ -49,27 +50,25 @@
           "lib/netstandard1.3/Amazon.Lambda.Serialization.Json.dll": {}
         }
       },
-      "awssdk.core/3.3.14.1": {
+      "awssdk.cloudfront/3.3.5": {
         "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Collections.NonGeneric": "4.0.1",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.IO.FileSystem": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.Net.Http": "4.3.2",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.InteropServices": "4.3.0",
-          "System.Security.Cryptography.Algorithms": "4.3.0",
-          "System.Security.Cryptography.Csp": "4.3.0",
-          "System.Threading": "4.3.0"
+          "AWSSDK.Core": "3.3.17"
+        },
+        "runtime": {
+          "lib/netstandard1.3/AWSSDK.CloudFront.dll": {}
+        }
+      },
+      "awssdk.core/3.3.17": {
+        "dependencies": {
+          "System.Security.Cryptography.Csp": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.3/AWSSDK.Core.dll": {}
         }
       },
-      "awssdk.s3/3.3.6.3": {
+      "awssdk.s3/3.3.8.2": {
         "dependencies": {
-          "AWSSDK.Core": "3.3.14.1"
+          "AWSSDK.Core": "3.3.17"
         },
         "runtime": {
           "lib/netstandard1.3/AWSSDK.S3.dll": {}
@@ -238,19 +237,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Collections.Concurrent.dll": {}
-        }
-      },
-      "system.collections.nongeneric/4.0.1": {
-        "dependencies": {
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.Collections.NonGeneric.dll": {}
         }
       },
       "system.diagnostics.debug/4.3.0": {
@@ -719,19 +705,26 @@
       "path": "amazon.lambda.serialization.json/1.1.0",
       "hashPath": "amazon.lambda.serialization.json.1.1.0.nupkg.sha512"
     },
-    "awssdk.core/3.3.14.1": {
+    "awssdk.cloudfront/3.3.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PXJWRGmCyFjdh+jPikOvIc3LEswiHGPt7GubgU1oAi8Fbbpfa8l0hOutHIPGQCrehZ+AIZgiqCFa5/kNSnLgOw==",
-      "path": "awssdk.core/3.3.14.1",
-      "hashPath": "awssdk.core.3.3.14.1.nupkg.sha512"
+      "sha512": "sha512-Xg28uUIrMmmQG+FNHZxfQ8WZJYj+vh3UaL0JAUKv8IdI3ug1F/Cssy2TLBbqQJPLZlxlUX0W6z/LWThn45Tx/g==",
+      "path": "awssdk.cloudfront/3.3.5",
+      "hashPath": "awssdk.cloudfront.3.3.5.nupkg.sha512"
     },
-    "awssdk.s3/3.3.6.3": {
+    "awssdk.core/3.3.17": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nS7Pwl8F5TiNVY/8S3e6mlphq5uCk2hfcm7NIsBpABdhnj0jNVQ4Z/I/aw5HydnmRuY+903uCJ1vkFnk44ppJg==",
-      "path": "awssdk.s3/3.3.6.3",
-      "hashPath": "awssdk.s3.3.3.6.3.nupkg.sha512"
+      "sha512": "sha512-NTE47l/BVjbelMxYKCAMaPM+OsnDY3t5nTFXYHEJeV+EFvSHsFNLCt2pbu4YBKWRhgvYmGCJzykdngkfwgjeog==",
+      "path": "awssdk.core/3.3.17",
+      "hashPath": "awssdk.core.3.3.17.nupkg.sha512"
+    },
+    "awssdk.s3/3.3.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-umNWWae0RFyt6mtt8FBwXYb466V5x78+1lRTGyIiVprXH4lyAmTkePkANinLYkijGKQCt3cKzJNOSdetc/lXTw==",
+      "path": "awssdk.s3/3.3.8.2",
+      "hashPath": "awssdk.s3.3.3.8.2.nupkg.sha512"
     },
     "microsoft.netcore.platforms/1.1.0": {
       "type": "package",
@@ -743,7 +736,7 @@
     "microsoft.netcore.targets/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "sha512": "sha512-NITu+mPSnhwvMNfedLhGMiEduc7X50pKLoW8Tvbe4Tr8fkf2ezu8rE5nvGytLd8zoQld1lG+bjiCQA+GdTUq7g==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
@@ -757,105 +750,105 @@
     "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HdSSp5MnJSsg08KMfZThpuLPJpPwE5hBXvHwoKWosyHHfe8Mh5WKT0ylEOf6yNzX6Ngjxe4Whkafh5q7Ymac4Q==",
+      "sha512": "sha512-H4lRaIJPVmMxnKgZvtqpRKg4egDRxvgTxcwE026GnS1OnTJW6a4tz173yO01flnAolW/LVhsmPSO0qANTQUDSg==",
       "path": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+yH1a49wJMy8Zt4yx5RhJrxO/DBDByAiCzNwiETI+1S4mPdCu0OY4djdciC7Vssk0l22wQaDLrXxXkp+3+7bVA==",
+      "sha512": "sha512-D0aoD8Bxfzcsi4lAQ2MJmhXBhAM8Kpt1yuUAfqplUN9ItRdhMOSKgfvjUcHF34qePfmGzZrvfk73UvCYeLFCyg==",
       "path": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-c3YNH1GQJbfIPJeCnr4avseugSqPrxwIqzthYyZDN6EuOyNOzq+y2KSUfRcXauya1sF4foESTgwM5e1A8arAKw==",
+      "sha512": "sha512-PENqcwSA7vXcYLYPdOwDEgxttEmL/l9fjkseSPzYHSXHcfTAanfMaWNjunW8uz/X0sBNg7Ty7niRDPTdDMrOuw==",
       "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.native.system/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-c/qWt2LieNZIj1jGnVNsE2Kl23Ya2aSTBuXMD6V7k9KWr6l16Tqdwq+hJScEpWER9753NWC8h96PaVNY5Ld7Jw==",
+      "sha512": "sha512-KXNx3yg2x/wvP7r8AtplmMQFlEAacMWikDChJRKprb7mhi0pkPNK56w5UhawY4dldy/JL8mpB15tpCSfUtZ4oQ==",
       "path": "runtime.native.system/4.3.0",
       "hashPath": "runtime.native.system.4.3.0.nupkg.sha512"
     },
     "runtime.native.system.net.http/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZVuZJqnnegJhd2k/PtAbbIcZ3aZeITq3sj06oKfMBSfphW3HDmk/t4ObvbOk/JA/swGR0LNqMksAh/f7gpTROg==",
+      "sha512": "sha512-R9qyIVAiozHZiyP+Pq949ToujDg/OylPKJFmSOHGYKJe2MCMM/LZeso3qLN+Nr6/rUAODAmysDKjznu66jvQkw==",
       "path": "runtime.native.system.net.http/4.3.0",
       "hashPath": "runtime.native.system.net.http.4.3.0.nupkg.sha512"
     },
     "runtime.native.system.security.cryptography.apple/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-DloMk88juo0OuOWr56QG7MNchmafTLYWvABy36izkrLI5VledI0rq28KGs1i9wbpeT9NPQrx/wTf8U2vazqQ3Q==",
+      "sha512": "sha512-YhI690efmF+avj7DTLug9+VwXxGBgFMCRihqCBmnIUM4S7pTUGKQ2XmvZTLKt7UjPKejsIwKUga76CT/diqTAA==",
       "path": "runtime.native.system.security.cryptography.apple/4.3.0",
       "hashPath": "runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512"
     },
     "runtime.native.system.security.cryptography.openssl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NS1U+700m4KFRHR5o4vo9DSlTmlCKu/u7dtE5sUHVIPB+xpXxYQvgBgA6wEIeCz6Yfn0Z52/72WYsToCEPJnrw==",
+      "sha512": "sha512-EABAq5yB16yNvzlKLKgB5ewzzPC8qa7wk8aVgr1NnPXhpnsFToR4S1v+QjM6AWqhDHVJYNYnI/MVoK7ZcO3YhA==",
       "path": "runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-b3pthNgxxFcD+Pc0WSEoC0+md3MyhRS6aCEeenvNE3Fdw1HyJ18ZhRFVJJzIeR/O/jpxPboB805Ho0T3Ul7w8A==",
+      "sha512": "sha512-Nd1ydWKvtF330DvmgkEPOI9oRndTg9T1DiIRKujKigoGa6tRaToTD6ytOsX/JBSF79wnUF3YTExTb2MS2/7cFw==",
       "path": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KeLz4HClKf+nFS7p/6Fi/CqyLXh81FpiGzcmuS8DGi9lUqSnZ6Es23/gv2O+1XVGfrbNmviF7CckBpavkBoIFQ==",
+      "sha512": "sha512-du+uwO+4nT3QqDSFgH9a/YUy2Z8S09ahFjbD9CqZeajdd+0EQZZ9oMgFcd4YoDIXwsZle5DZgZskCoGjhoS/hg==",
       "path": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kVXCuMTrTlxq4XOOMAysuNwsXWpYeboGddNGpIgNSZmv1b6r/s/DPk0fYMB7Q5Qo4bY68o48jt4T4y5BVecbCQ==",
+      "sha512": "sha512-FbXuwkEDG9XViokTLQibj73w/lVDCBsS/xiVA0ZAfR5kN0pfYtsEesJgHbqNr8FRNZ4AsJUHKsqwdWbt+eyt2Q==",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0",
       "hashPath": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512"
     },
     "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-X7IdhILzr4ROXd8mI1BUCQMSHSQwelUlBjF1JyTKCjXaOGn2fB4EKBxQbCK2VjO3WaWIdlXZL3W6TiIVnrhX4g==",
+      "sha512": "sha512-0Yr3bwTigbdg13jZlUF+S41vJKaf9407F4VbuGjDT+PaeeL9jQq2R3TBnWyK7EjVPwryDdeeA+/97qtHt2EhoQ==",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nyFNiCk/r+VOiIqreLix8yN+q3Wga9+SE8BCgkf+2BwEKiNx6DyvFjCgkfV743/grxv8jHJ8gUK4XEQw7yzRYg==",
+      "sha512": "sha512-Ft+Q2vSOWilZJu8ZRwCzgWJR4M1wyo5H0UlZoubgzhARqobkiiuSzZbpaoAicu2H6Jr6sz8v0kDvo1ptFWgKpA==",
       "path": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
+      "sha512": "sha512-pTeANTIqusFnMXbSAUlpMPbb5uje+YTgVYoHp/mXhjpTr7dGYiLO0dFEyvwctYF/rm8Bk2teQlvOl1RXoh3PPQ==",
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-I8bKw2I8k58Wx7fMKQJn2R8lamboCAiHfHeV/pS65ScKWMMI0+wJkLYlEKvgW1D/XvSl/221clBoR2q9QNNM7A==",
+      "sha512": "sha512-xXfPzMx46FDTi6jvjYRP8uCAflIXhq5G+8B55igoxEMve/ozXnidvA7BgzOW60qi/mxwgS4/bMvegtmnr5YLdQ==",
       "path": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
+      "sha512": "sha512-H5Vo07/BywypH57WthyvYuZhBx1rGKzwFCrF6rAy/yp5VY1VhQCvKukUrCcTg55roKeDvBDQNoAk+l0Kmu+2QQ==",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
@@ -872,13 +865,6 @@
       "sha512": "sha512-ztl69Xp0Y/UXCL+3v3tEU+lIy+bvjKNUmopn1wep/a291pVPK7dxBd6T7WnlQqRog+d1a/hSsgRsmFnIBKTPLQ==",
       "path": "system.collections.concurrent/4.3.0",
       "hashPath": "system.collections.concurrent.4.3.0.nupkg.sha512"
-    },
-    "system.collections.nongeneric/4.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-hMxFT2RhhlffyCdKLDXjx8WEC5JfCvNozAZxCablAuFRH74SCV4AgzE8yJCh/73bFnEoZgJ9MJmkjQ0dJmnKqA==",
-      "path": "system.collections.nongeneric/4.0.1",
-      "hashPath": "system.collections.nongeneric.4.0.1.nupkg.sha512"
     },
     "system.diagnostics.debug/4.3.0": {
       "type": "package",
@@ -918,7 +904,7 @@
     "system.globalization.extensions/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FhKmdR6MPG+pxow6wGtNAWdZh7noIOpdD5TwQ3CprzgIE1bBBoim0vbR1+AWsWjQmU7zXHgQo4TWSP6lCeiWcQ==",
+      "sha512": "sha512-AoffqOGjRHiKE7l8g32WhHHXLanQl0L6gvqK03M3qGByzryL5zJKAvmH6bgYvtgZxrZk+XwWfovXDS/o6pL0yw==",
       "path": "system.globalization.extensions/4.3.0",
       "hashPath": "system.globalization.extensions.4.3.0.nupkg.sha512"
     },
@@ -1037,14 +1023,14 @@
     "system.security.cryptography.cng/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-03idZOqFlsKRL4W+LuCpJ6dBYDUWReug6lZjBa3uJWnk5sPCUXckocevTaUA8iT/MFSrY/2HXkOt753xQ/cf8g==",
+      "sha512": "sha512-0nS5I+qCBZa7iSryuL3d2ydw/8syMnX+JaoYcNuhziHC6HnF7xcIoaI5SkEXjCNVXyGOE/O1VRv1/MiAkIQmsw==",
       "path": "system.security.cryptography.cng/4.3.0",
       "hashPath": "system.security.cryptography.cng.4.3.0.nupkg.sha512"
     },
     "system.security.cryptography.csp/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-X4s/FCkEUnRGnwR3aSfVIkldBmtURMhmexALNTwpjklzxWU7yjMk7GHLKOZTNkgnWnE0q7+BCf9N2LVRWxewaA==",
+      "sha512": "sha512-1CpmoJLtL6PCvkWdnKbHMGjYR/5wQGHF3JhNO2OnQpckH+LP5pyvfHyOy4FyEZdO2XUvRo3+B0DPRnj/Dlb6tA==",
       "path": "system.security.cryptography.csp/4.3.0",
       "hashPath": "system.security.cryptography.csp.4.3.0.nupkg.sha512"
     },
@@ -1058,7 +1044,7 @@
     "system.security.cryptography.openssl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-h4CEgOgv5PKVF/HwaHzJRiVboL2THYCou97zpmhjghx5frc7fIvlkY1jL+lnIQyChrJDMNEXS6r7byGif8Cy4w==",
+      "sha512": "sha512-yzxh2Lu2dic+dgjpQyqrR9sX5jqJ3gKw9Fp69QOMMl/X87GTUbZg27oG0Xz9iTazLX1AytESonUMHZ0WRKvPKg==",
       "path": "system.security.cryptography.openssl/4.3.0",
       "hashPath": "system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },

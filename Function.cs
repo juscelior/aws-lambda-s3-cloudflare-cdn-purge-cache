@@ -8,6 +8,8 @@ using Amazon.S3;
 using Amazon.Lambda.S3Events;
 using System.Net.Http;
 using System.Text;
+using Amazon.CloudFront;
+using Amazon.CloudFront.Model;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
@@ -17,6 +19,9 @@ namespace AWSLambdaS3.CloudFlarePurgeCache
     public class Function
     {
         IAmazonS3 S3Client { get; set; }
+        IAmazonCloudFront cfClient { get; set; }
+        string distribuitionCloudFrontId { get; set; }
+
 
         /// <summary>
         /// Default constructor. This constructor is used by Lambda to construct the instance. When invoked in a Lambda environment
@@ -26,15 +31,26 @@ namespace AWSLambdaS3.CloudFlarePurgeCache
         public Function()
         {
             S3Client = new AmazonS3Client();
+
+            distribuitionCloudFrontId = Environment.GetEnvironmentVariable("CloudFrontDistribution");
+            if (!string.IsNullOrWhiteSpace(distribuitionCloudFrontId))
+            {
+                cfClient = new AmazonCloudFrontClient();
+            }
         }
 
         /// <summary>
         /// Constructs an instance with a preconfigured S3 client. This can be used for testing the outside of the Lambda environment.
         /// </summary>
         /// <param name="s3Client"></param>
-        public Function(IAmazonS3 s3Client)
+        public Function(IAmazonS3 s3Client, IAmazonCloudFront cfClient)
         {
             this.S3Client = s3Client;
+
+            if (cfClient != null)
+            {
+                this.cfClient = cfClient;
+            }
         }
 
         /// <summary>
@@ -74,6 +90,25 @@ namespace AWSLambdaS3.CloudFlarePurgeCache
                         request.Content = content;
                         message = await client.SendAsync(request);
                     }
+                }
+
+                if (!string.IsNullOrWhiteSpace(distribuitionCloudFrontId))
+                {
+                    CreateInvalidationRequest invaliationReq = new CreateInvalidationRequest()
+                    {
+                        DistributionId = distribuitionCloudFrontId,
+                        InvalidationBatch = new InvalidationBatch()
+                        {
+                            Paths = new Paths()
+                            {
+                                Items = new List<string>() {
+                                    $"/{s3Event.Object.Key}"
+                                }
+                            }
+                        }
+                    };
+
+                    CreateInvalidationResponse invalidationResponse = await this.cfClient.CreateInvalidationAsync(invaliationReq);
                 }
 
                 return await message.Content.ReadAsStringAsync();
